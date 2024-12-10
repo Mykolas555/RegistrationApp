@@ -1,0 +1,54 @@
+/* Reset margins and paddings to ensure full-screen layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure html and body take up the full viewport */
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* Prevent scrolling */
+ 
+}
+
+/* Make the App component take up the full screen */
+.App {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  overflow: hidden;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Full-screen canvas */
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Optional container styling for content above the canvas */
+.container {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  height: 90%;
+  width: 90%;
+}
+
+.content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  height: 100%;
+  border: solid 3px white
+}
